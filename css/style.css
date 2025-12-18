@@ -1,0 +1,353 @@
+@charset "UTF-8";
+@import url("font.css");
+@import url("reset.css");
+
+body {
+    font-family: 'Paperozi', 'Pretendard';
+    overflow-x: hidden;
+}
+
+/* .popup {
+    width: 400px; height: 500px; position: absolute; top: 150px; left: 50%; background-color: aliceblue;
+} */
+ /* position:absolute로 허공에 뜬 태그의 크기를 100%로 설정했을 때 부모를 못 알아보고 커진다면 부모 태그에게 position:relative를 줘서 알아보게 하기 */
+
+.centerbox {
+    width: 1200px; margin: 0 auto;
+}
+
+    .header .centerbox {
+        display: flex; justify-content:space-between; width: 1416px; margin: 6px auto 11px;
+    }
+        .header .logo {
+            display: flex; width: 200px; height: 75px; margin-top: 12px;
+        }
+            .header .logo a {
+                display: flex; flex-grow: 1;
+            }
+            .header .logo a img {
+                display: flex; flex-grow: 1;
+                width: 100%;
+            }
+        .header .nav {
+            display: flex; align-items: center;
+            width: 550px; height: 40px; margin-top: 58px; align-items: center;
+        }
+            .header .nav .gnb {
+                display: flex; flex-grow: 1; justify-content: center;
+                height: 100%;
+                padding: 0 40px;
+            }
+            .header .nav .gnb li {
+                display: flex; position: relative; align-items: center; transition: 0.5s;
+            }
+            .header .nav .gnb > li > a {
+                display: flex; flex-grow: 1; font-size: 20px; padding: 5px 20px;
+            }
+            .header .nav .gnb > li:hover {
+                border-top: 1px solid #003577; padding: 0 15px;
+            }
+            .header .nav .gnb > li:hover > a {
+                padding: 4px 20px;
+            }
+                .header .nav .gnb li .lnb {
+                    position: absolute; left: 0; top: 100%;
+                    width: 100%; height: 0; background-color:rgba(0, 92, 172, 90%); 
+                    overflow: hidden; /* 높이값을 넘어가는 부분은 숨겨짐 */
+                    transition: 0.3s; /* 부드럽게 액션 */
+                    z-index: 2; /* 우선순위를 조정하는 태그 */
+                }
+                .header .nav .gnb > li:hover .lnb {
+                    height: 170px;
+                }
+                .header .nav .gnb li .lnb li {
+                    display: block; text-align: center; transition: 0.2s;
+                }
+                .header .nav .gnb li .lnb a {
+                    display: block; font-size: 15px; padding: 10px; color: azure;
+                }
+                .header .nav .gnb li .lnb li:hover {
+                    background-color:#003577;
+                } 
+            
+        .header .searchbox {
+            display: flex; width: 235px; height: 58px; margin-top: 33px; border-radius: 85px; border: 4px solid #003577; box-sizing: border-box; align-items: center; padding: 0 21px 0 28px; justify-content: space-between; font-size: 15px; color: #848484;
+        }
+            .header .searchbox img {
+                display: flex;
+            }
+
+.visual {
+    text-align: center; position: relative;
+}
+    .visual > span {
+        position: absolute;
+        width: 100%; text-align: left; color: #fff;
+    }
+    .visual h2 {
+        position: absolute; font-size: 65px; font-weight: 400; left: 295px; top: 261px;
+    }
+    .visual h2 > span {
+        font-weight: 600;
+    }
+    .visual h3 {
+        position: absolute; font-size: 30px; font-weight: 400; left: 295px; top: 432px;
+    }
+    .visual .visual_btn {
+        position: absolute; width: 180px; height: 65px; background: #010102; border-radius: 46px; top: 526px; left: 295px; transition: 0.2s;
+    }
+        .visual .visual_btn a {
+            display: flex; justify-content: center; align-items: center; gap: 13px; width: 100%; height: 100%; color: #fff; font-size: 22px;
+        }
+    .visual .visual_btn:hover {
+        background: #003577;
+    }
+    .visual .btn_pagi {
+        position: absolute; bottom: 55px; left: 50%; transform: translateX(-50%);
+    }
+    .visual .btn_pagi span {
+        font-weight: 600; font-size: 16px; color: #fff; letter-spacing: 4px;
+    }
+    .visual .btn_pagi > div {
+        display: flex; align-items: center; gap: 25px;
+    }
+    .visual .btn_pagi > div a {
+        display: flex;
+    }
+    .visual .btn_pagi > div > .pagination {
+        display: flex; gap: 10px;
+    }
+    .visual .btn_pagi > div > .pagination > div {
+        width: 12px; height: 12px; background: #fff; border-radius: 60%;
+    }
+    .visual .btn_pagi > div > .pagination > div.now {
+        width: 82px; height: 12px; border-radius: 6px; background: #005CAC;
+    }
+    .visual > img {
+        width: 1920px;
+    }
+
+.sectionbox {
+    position: relative;
+}
+    .sectionbox .section1 {
+        width: 100%; height: 1165px;
+    }
+    .sectionbox .centerbox {
+        text-align: center;
+    }
+    .sectionbox .section1 .centerbox h2 {
+        margin-top: 192px; font-size: 45px; font-weight: 600;
+    }
+    .sectionbox .section1 .centerbox h3 {
+        font-size: 20px; font-weight: 600; color: #003577; margin-top: 6px;
+    }
+    .sectionbox .section1 .centerbox .tab {
+        display: flex; justify-content: center; height: 78px; margin-top: 60px;
+    }
+        .sectionbox .section1 .centerbox .content {
+            position: relative;
+        }
+        .sectionbox .section1 .centerbox .tab a {
+            display: flex; width: 33%; height: 78px; font-size: 25px; font-weight: 600; background-color: #eee; color: #005CAC; justify-content: center; align-items: center; transition: 0.2s;
+        }
+        .sectionbox .section1 .centerbox .tab a:nth-child(1) {
+            border-radius: 30px 0 0 30px; border-right: 2px solid #C8CCD0;
+        }
+        .sectionbox .section1 .centerbox .tab a:nth-child(3) {
+            border-radius: 0 30px 30px 0; border-left: 2px solid #C8CCD0;
+        }
+        .sectionbox .section1 .centerbox .tab a:hover {
+            background-color: #005CAC; color: #fff;
+        }
+    .sectionbox .section1 .content .cont {
+        display: flex;
+    }
+        .sectionbox .section1 .content .cont li {
+            display: inline; width: 33%; margin-top: 71px;
+        }
+        .sectionbox .section1 .content .cont li h4 {
+            font-weight: 600; font-size: 32px;
+        }
+        .sectionbox .section1 .content .cont li span {
+            display: flex; justify-content: center;; font-weight: 400; font-size: 16px; color: #727272; margin-top: 4px;
+        }
+    .sectionbox .section1 .content .pagination {
+        display: flex; position: absolute; width: 100%; justify-content: center; margin-top: 20px; gap: 10px;
+    }
+        .sectionbox .section1 .content .pagination a {
+            width: 8px; height: 8px; border-radius: 50%; background-color: #C8CCD0;
+        }
+        .sectionbox .section1 .content .pagination a.on {
+            background-color: #005CAC;
+        }
+    .bgimg_1 {
+        display: flex; justify-content: center; position: absolute; width: 100%; top: -290px; z-index: -1; overflow: hidden;
+    }
+    
+    .sectionbox .section2 {
+        position: relative; width: 100%; height: 830px; margin-top: -100px;
+    }
+        .sectionbox .section2 h2 {
+            margin-top: 0px; font-size: 45px; font-weight: 600; color: #fff;
+        }
+        .sectionbox .section2 .btn_go {
+            display: flex; justify-self: center; justify-content: center;
+            height: 40px; background: #eee; border-radius: 25px;  margin-top: 9px; padding: 0 23px;
+        }
+        .sectionbox .section2 .btn_go a {
+            display: flex; align-items: center; gap: 13px; font-size: 18px; color: #003577; font-weight: 600;
+        }
+        .sectionbox .section2 .content {
+            width: 1200px; height: 430px; margin-top: 56px; border-radius: 30px;
+            background-color: #fff; box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 25%);
+        }
+            .sectionbox .section2 .cont {
+                padding: 60px 53px;
+            }
+                .sectionbox .section2 .cont li {
+                    display: flex; gap: 30px; border-bottom: 1px solid #C4C4C4; transition: 0.2s;
+                }
+                .sectionbox .section2 .cont li:hover {
+                    background: #eee;
+                }
+                .sectionbox .section2 .cont li span {
+                    display: flex; align-items: center; justify-content: center;
+                    width: 100%; font-size: 20px;
+                }
+                .sectionbox .section2 .cont li span:nth-child(3) {
+                    padding: 0 10px;
+                }
+                .sectionbox .section2 .cont li span:nth-child(4) {
+                    padding: 0 20px;
+                }
+                .sectionbox .section2 .cont li span a {
+                    display: flex;
+                    padding: 16px 0; width: 100%;
+                }
+                .sectionbox .section2 .cont li span.subject {
+                    width: 699px; flex-shrink: 0;
+                }
+                .sectionbox .section2 .cont li span.graytext {
+                    font-size: 16px; color: #747474;
+                }
+        .bgimg_2 {
+            display: flex; justify-content: center; position: absolute; width: 100%; top: -81px; z-index: -1;
+        }
+    
+    .sectionbox .section3 {
+        position: relative; width: 100%;
+    }
+        .sectionbox .section3 h2 {
+            margin-top: 81px; font-size: 45px; font-weight: 600;
+        }
+        .sectionbox .section3 .btn_go {
+            display: flex; justify-self: center; justify-content: center;
+            height: 40px; background: #eee; border-radius: 25px;  margin-top: 9px; padding: 0 23px;
+        }
+        .sectionbox .section3 .btn_go a {
+            display: flex; align-items: center; gap: 10px; font-size: 18px; color: #003577; font-weight: 600;
+        }
+        .sectionbox .section3 .content .map {
+            margin-top: 26px;
+        }
+        .sectionbox .section3 .content .adress {
+            position: relative;
+            width: 1200px; height: 254px; margin-top: 8px;
+            border-radius: 30px; background: #fff; box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 25%);
+        }
+            .sectionbox .section3 .content .adress .btn_city {
+                display: flex; justify-content: center; gap: 31px;
+            }
+            .sectionbox .section3 .content .adress .btn_city div {
+                display: flex;
+                width: 299px; height: 62px; background: #fff; margin-top: 11px;
+                border-radius: 101px; border: 3px solid #003577; box-sizing: border-box; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%); transition: 0.2s;
+            }
+            .sectionbox .section3 .content .adress .btn_city div a {
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 100%; font-size: 22px; font-weight: 500;
+            }
+            .sectionbox .section3 .content .adress .btn_city div:hover {
+                background: #eceff3;
+            }
+            .sectionbox .section3 .content .adress h3 {
+                display: flex;
+                margin: 21px 0 0 144px; font-weight: 500; font-size: 28px;
+            }
+            .sectionbox .section3 .content .adress .star > img {
+                position: absolute; left: 110px; top: 97px;
+            }
+            .sectionbox .section3 .content .adress .info_adress span {
+                display: flex; gap: 23px;
+                margin-top: 3px; color: #727272; font-size: 16px;
+            }
+            .sectionbox .section3 .content .adress .info_adress span:nth-child(1) {
+                margin-top: 15px;
+            }
+            .sectionbox .section3 .content .adress .info_adress span p:nth-child(1) {
+                display: flex;
+                width: 80px; margin-left: 163px;
+            }
+            .sectionbox .section3 .content .adress .info_btn {
+                display: flex;
+            }
+            .sectionbox .section3 .content .adress .btn_map {
+                display: flex; margin-top: 10px; margin-left: 180px; gap: 13px;
+            }
+            .sectionbox .section3 .content .adress .btn_map1 {
+                width: 244px; height: 65px; background: #003679; border-radius: 65px;
+            }
+            .sectionbox .section3 .content .adress .btn_map1 a {
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 100%; color: #fff; font-size: 18px;
+            }
+            .sectionbox .section3 .content .adress .btn_map1 a span {
+                font-weight: 500;
+            }
+            .sectionbox .section3 .content .adress .btn_map2 {
+                display: flex; justify-content: center; align-items: center;
+                width: 65px; height: 65px; background: #003679; border-radius: 65px;
+            }
+            .sectionbox .section3 .content .adress .btn_map2 a {
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 100%;
+            }
+        .sectionbox .section3 .bgimg_3 {
+            display: flex; justify-content: center; position: absolute; width: 100%; top: 277px; z-index: -1;
+        }
+
+.footer {
+    width: 100%; padding: 55px 0; margin-top: 165px; background: #1F1F1F;
+}
+    .footer .footer_box {
+        width: 905px; margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        /* 세로 정렬 */
+    }
+    .footer .footer_box h1 {
+        display: block; width: 200px;
+    }
+        .footer .footer_box h1 a img {
+            width: 100%;
+        }
+    .footer .footer_box ul {
+        display: flex; justify-content: space-between;
+        margin-top: 23px; margin-bottom: 13px;
+    }
+    .footer .footer_box ul li a {
+        font-size: 18px; color: #E2E2E2;
+    }
+    .footer .footer_box ul li:hover a {
+        text-decoration: underline;
+    }
+    .footer .footer_box > span {
+        display: flex;
+        margin-top: 10px; font-size: 14px; color: #BCBCBC; font-family: 'Pretendard';
+    }
+
+
+
+
+/* sub CSS */
